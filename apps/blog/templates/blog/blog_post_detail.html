@@ -1,0 +1,17 @@
+{% extends "blog/blog_post_list.html" %}
+{% load static %}
+
+    {% block blog__body__post %}
+    <div class="blog__post">
+            <div class="blog__post__title">
+              <h2>{{ post.title }}</h2>
+            </div>
+            <div class="blog__post__text">
+                <p>{{ post.body }}</p>
+            </div>
+            <div class="blog__post__pub__date__and__read">
+              <p><i class="fa fa-pencil"></i> {{ post.created|date:'d-m-Y' }}</p>
+            </div>
+            <a href="{% url 'blog:blog_posts_list_url' %}">Назад</a>
+    </div>
+    {% endblock blog__body__post %}

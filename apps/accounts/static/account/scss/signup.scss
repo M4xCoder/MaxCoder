@@ -1,0 +1,61 @@
+$hover_color: #00cfd6;
+
+
+.block__common{
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    margin: 5px auto;
+    padding: 5px 15px;
+
+    p {
+        color: #3a3a3a;
+    }
+  }
+
+.block{
+    width: 100%;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 15px; 
+    box-shadow: #00000033 0 4px 2px -2px;
+    font-weight: 100;
+    margin: 48px 10px;
+    padding: 10px 40px;
+
+    p {
+        color: #3a3a3a;
+    }
+}
+
+
+input[type=email], input[type=password], input[type=text]{
+width: 100%;
+padding: 10px 6px;
+margin: 4px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+button{
+  background-color: $hover_color;
+  color: white;
+  padding: 14px 30px;
+  margin: 8px 0;
+  border: none;
+  cursor: grabbing;
+
+
+  &:hover{opacity: 0.8;
+  }
+}
+
+.errorlist{
+  color: red;
+  padding: 0;
+}
+
+.fieldWrapper{
+  padding: 10px 0;
+}

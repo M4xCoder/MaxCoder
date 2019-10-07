@@ -1,0 +1,4 @@
+/.python-version
+/db.sqlite3
+/maxcoder_config/prod_settings.py
+/.idea

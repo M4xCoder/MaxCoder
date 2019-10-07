@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block render_css %}
+    <link rel="stylesheet" href={% static "home_page/css/home.css" %}>
+{% endblock render_css %}
+
+{% block content %}
+            <div class="about row justify-content-center no-gutters">
+                      <div class="col-auto col-md-4">
+                              <img src={% static "home_page/img/about.png" %} alt="about">
+                      </div>
+                      <div class="col-auto col-md-8">
+                          <p>Всем привет! Меня зовут Максим (Pritvor69). Я начинающий web-разработчик и автор этого блога.
+                             Рад видеть вас на его страничках! В процессе работы и учебы я часто сталкиваюсь с интересной
+                             информацией, которой хотелось бы поделиться с вами :) Но, поскольку у меня, как и у практически
+                             любого человека, интересы не ограничиваются лишь одной областью, то и писать в блоге только о 
+                             веб-разработке и программировании было бы неправильно. Ведь в мире так много интересного!
+                             Буду рад, если мои статьи окажутся полезными и помогут вам разобраться в ваших вопросах!
+                          </p>
+                      </div>
+
+              </div>
+{% endblock content %}

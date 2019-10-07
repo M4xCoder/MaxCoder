@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block render_css %}
+    <link rel="stylesheet" href={% static "account/css/logout.css" %}>
+{% endblock render_css %}
+
+{% block content %}
+      <div class="row block__common justify-content-center">
+        <div class="col-12 block">
+          <h2>Выйти</h2>
+          <p>Вы уверены, что хотите выйти?</p>
+          <form method="post" action="{% url 'account_logout' %}">
+          {% csrf_token %}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button type="submit">Выход</button>
+          </form>
+        </div>
+      </div>
+{% endblock %}

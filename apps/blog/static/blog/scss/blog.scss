@@ -1,0 +1,155 @@
+$hover_color: #00cfd6;
+
+
+.block__common{
+    width: 90%;
+    text-align: center;
+    font-weight: 100;
+    margin: 20px auto;
+    padding: 5px 15px;
+    background-color: #fafafa;
+    border-radius: 15px; 
+    box-shadow: #00000033 0 4px 2px -2px;
+    
+    p {
+        color: #3a3a3a;
+    }
+    
+    h1{
+      padding: 0;
+      margin: 0;
+    }
+
+    hr{
+      display: none;
+    }
+}
+
+.block{
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    margin: 10px;
+    padding: 10px 40px;
+}
+
+.blog__post {
+  padding: 10px 10px 30px 10px;
+  margin: 20px auto;
+  border-radius: 15px;
+  border-bottom: 1px dashed #c1c1c1;
+}
+
+.blog__post__header{
+  text-align: start;
+}
+
+.blog__post__title{
+  text-align: start;
+}
+
+.blog__post__text{
+  overflow: hidden;
+  text-align: start;
+
+  p{
+  word-break: break-all;
+  white-space: pre-line;
+  }
+}
+
+.blog__post__pub__date__and__read{
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 10px;
+  text-align: end;
+}
+
+.blog__nav {
+  padding: 10px;
+  text-align: start;
+
+  h3{
+    white-space: nowrap;
+  }
+
+  a{
+    padding: 5px;
+    font-size: 17px;
+    white-space: nowrap;
+    font-weight: bolder;
+  }
+
+}
+  
+  
+  
+.blog__nav__category{
+  
+  ul{
+    padding: 0;
+  }
+
+  li{
+    padding: 10px 10px 0 0;
+  }
+
+}
+
+
+.blog__nav__searsh{
+
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  input[type="text"]{
+    margin: 8px 0;
+    padding: 5px;
+    outline: none;
+    border: 1px solid #000000;
+    border-right: none;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px 0 0 4px;
+    width: 60%;
+  }
+
+  button {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    margin: 8px 0;
+    color: #000000;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 40px;
+  
+    &:hover {
+      color: $hover_color;
+    }
+  }
+}
+
+.blog__nav__tag{
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    padding: 10px 10px 0 0;
+  }
+
+  a {
+    border: 1px solid #999999;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
