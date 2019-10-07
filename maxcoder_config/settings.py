@@ -77,7 +77,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'maxcoder_config.wsgi.application'
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -96,7 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -110,7 +108,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
@@ -122,12 +119,3 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'src/media/')  # Путь для хранения загружаемых данных проекта
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'maxcoder_config/static/')]
-
-#LOGIN_URL = "/auth/login/"  #прямая ссылка на страницу входа
-#LOGIN_URL = "authapp:login"  #ссылка на страницу входа через имя указанное в привязке url
-#LOGOUT_URL = "authapp:logout"  #ссылка на страницу выхода через имя указанное в привязке url
-#LOGIN_REDIRECT_URL = "/certificates/" #прямая ссылка на страницу перенаправления после успешного входа
-
-
-YANDEX_METRICA_COUNTER_ID = '00000000'
-

@@ -2,3 +2,6 @@
 /db.sqlite3
 /maxcoder_config/prod_settings.py
 /.idea
+/apps/shop/migrations/0001_initial.py
+/apps/blog/migrations/0001_initial.py
+/apps/accounts/migrations/0001_initial.py

@@ -5,12 +5,12 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5ph!4k*o$#cascbabe+%$@y&$wj%+tf+z(wnwi=npp&8(bmc2a'
+SECRET_KEY = 'test0000test0000test0000test'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', ]
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
