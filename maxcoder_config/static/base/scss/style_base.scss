@@ -47,20 +47,18 @@ header{
   color: #ffffff;
   text-align: center;
   }
+
   img {
-    width: 90%;
-    min-width: 300px;
-    max-width: 360px;
+    width: 100px;
     height: auto;
     padding: 5px;
     display:block;
-    margin:auto;
+    margin:5px auto;
    }
 }
 
 nav {
-  border-bottom: 1px solid #b3b3b346;
-  padding-bottom: 10px; 
+  padding: 5px;
 }
 
 .topnav {
@@ -69,9 +67,9 @@ nav {
   a {
   display: flex;
   text-align: center;
-  color: #000000;
-  padding: 5px 16px;
-  font-size: 17px;
+  color: #fffbff;
+  padding: 5px 10px;
+  font-size: 15px;
   }
 
   a:hover {
@@ -115,5 +113,9 @@ footer {
   font-style: italic;
   font-size: 10px;
   }
+}
+
+.background{
+  background: url("../img/bg02.png");
 }
 

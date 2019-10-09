@@ -113,9 +113,9 @@ USE_TZ = True
 
 #################################################3
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'src/static/')  # Путь для сбора всех статических файлов
+STATIC_ROOT = os.path.join(BASE_DIR, 'public/static/')  # Путь для сбора всех статических файлов
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'src/media/')  # Путь для хранения загружаемых данных проекта
+MEDIA_ROOT = os.path.join(BASE_DIR, 'public/media/')  # Путь для хранения загружаемых данных проекта
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'maxcoder_config/static/')]

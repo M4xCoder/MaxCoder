@@ -1,14 +1,14 @@
 <!DOCTYPE html>  {% load static %} {% load yandex_metrica %}
 <html lang="ru">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="author" lang="en" content="Pritvor69" />
-    <meta name="copyright" lang="en" content="maxjournal.ru" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content=""/>
+    <meta name="author" lang="en" content="Pritvor69"/>
+    <meta name="copyright" lang="en" content="maxjournal.ru"/>
     <title>{{ pagename }}</title>
     <link rel="apple-touch-icon" sizes="180x180" href={% static "base/img/favicon180*180.png" %}>
     <link rel="icon" type="image/png" sizes="32x32" href={% static "base/img/favicon32*32.png" %}>
@@ -23,87 +23,85 @@
     {% yandex_metrica %}
     <!-- /Yandex.Metrika counter -->
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Page Header -->
-    <header class="container-fluid" >
-      <div class="logo row justify-content-md-between justify-content-around">
-        <div class="col-md-4 ml-md-4">
-        <a href="#"><img src={% static "base/img/logo.png" %} class="graphic__logo" alt="logo"></a>
+<!-- Page Header -->
+<header class="container-fluid">
+    <div class="logo row justify-content-md-between justify-content-around">
+
+        <!-- Navigation -->
+        <div class="col-auto mr-2">
+            <nav class="container">
+                <div class="row justify-content-between">
+                    <div class="col-auto ml-2">
+                        <a href="#"><img src={% static "base/img/logo.png" %} class="graphic__logo" alt="logo"></a>
+                    </div>
+                    <div class="col-auto">
+                        <div class="topnav row justify-content-center no-gutters">
+                            <div class="col-auto">
+                                <a href="/">Главная</a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/shop">Программы и сервисы</a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div class="col-md-4 col-10 mr-md-4">
-        <p>Web-программирование и разработка программного обеспечения.</p>
+    <div class="col-auto ml-2">
+            {% if not request.user.is_authenticated %}
+                <div class="col">
+                    <div class="logInOut row justify-content-center no-gutters">
+                        <div class="col-auto">
+                            <a href="{% url 'account_login' %}"><i class="fa  fa-mail-forward"> Вход</i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <div class="col">
+                    <div class="logInOut row justify-content-center no-gutters">
+                        <div class="col-auto">
+                            <a href="{% url 'profile' %}">Личный кабинет</a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="{% url 'account_logout' %}">Выход</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
-      </div>
 
-      <!-- Navigation -->
-      <nav class="container">
-        <div class="row justify-content-between">
-          <div class=" col-12 col-lg-auto ">
-            <div class="topnav row justify-content-center no-gutters">
-              <div class="col-auto">
-                <a href="/">Главная</a>
-              </div>
-              <div class="col-auto">
-                  <a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a>
-              </div>
-              <div class="col-auto">
-                <a href="/shop">Программы и сервисы</a>
-              </div>
-              <div class="col-auto">
-                <a href="#">Контакты</a>
-              </div>
-            </div>
-          </div>
-          {% if not request.user.is_authenticated %}
-          <div class="col-12 col-lg-auto">
-            <div class="logInOut row justify-content-center no-gutters">
-              <div class="col-auto">
-                <a href="{% url 'account_login' %}">Войти</a>
-              </div>
-              <div class="col-auto">
-                <a href="{% url 'account_signup' %}">Регистрация</a>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% if request.user.is_authenticated %}
-          <div class="col-12 col-lg-auto">
-            <div class="logInOut row justify-content-center no-gutters">
-              <div class="col-auto">
-                <a href="{% url 'profile' %}">Личный кабинет</a>
-              </div>
-              <div class="col-auto">
-                <a href="{% url 'account_logout' %}">Выход</a>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-        </div>
-      </nav>
-    </header>
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main class="container-fluid">
-        {% block content %}{% endblock content %}
-    </main>
+<!-- Main Content -->
+<main class="container-fluid">
+    {% block content %}{% endblock content %}
+</main>
 
 
-
-    <!-- Footer -->
-    <footer class="container-fluid">
-      <div class="row justify-content-center">
+<!-- Footer -->
+<footer class="container-fluid">
+    <div class="row justify-content-center">
         <div class="col-auto">
-          <p>Copyright &copy; MaxJournal 2019г</p>
+            <p>Copyright &copy; MaxCoder 2019г</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- JavaScript -->
-    {% block render_js %}{% endblock render_js %}
-    
-  </body>
+<!-- JavaScript -->
+{% block render_js %}{% endblock render_js %}
+
+</body>
 
 </html>
