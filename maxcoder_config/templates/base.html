@@ -33,9 +33,9 @@
 
         <!-- Navigation -->
         <div class="col-auto mr-2">
-            <nav class="container">
-                <div class="row justify-content-between">
-                    <div class="col-auto ml-2">
+            <nav class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col ml-2">
                         <a href="#"><img src={% static "base/img/logo.png" %} class="graphic__logo" alt="logo"></a>
                     </div>
                     <div class="col-auto">
@@ -57,7 +57,7 @@
                 </div>
             </nav>
         </div>
-    <div class="col-auto ml-2">
+        <div class="col-auto mr-2">
             {% if not request.user.is_authenticated %}
                 <div class="col">
                     <div class="logInOut row justify-content-center no-gutters">
