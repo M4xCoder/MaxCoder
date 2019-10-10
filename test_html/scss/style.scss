@@ -1,0 +1,133 @@
+@import "normalize";
+$bg-head-footer: url(../img/bg-head-footer.png);
+$font: Arial, sans-serif;
+$hover_color: #00cfd6;
+
+body{
+	  font-family: $font;
+		font-size: 14px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+				"main main main"
+        "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
+    grid-gap: 10px;
+    height: 100vh;
+		margin: 0;	
+}
+
+
+/* Navigation */
+header{
+    display: flex;
+    width: 100%;
+    grid-area: header;
+    background: $bg-head-footer;
+
+    nav{
+        display: flex;
+        width: 100%;
+
+        ul{
+						display: flex;
+            width: 100%;
+            align-items: center;
+						margin: 0;
+						padding: 0;
+						
+						img{
+							width: 100px;
+							height: auto;
+							display:block;
+							margin:0 0 0 35px;
+						}
+
+            li{
+                list-style: none;
+								padding: 0 0 0 20px;
+								white-space: nowrap;
+                
+                &:last-child{
+                    margin: 0 35px 0 auto;
+                    
+
+                    a{
+                      border: 2px solid #504f4f;
+											background-color: #ffffff;
+											padding: 5px 10px;
+											border-radius: 4px;
+											cursor: pointer;
+											color: #000000;
+											outline: none;
+											font-size: 13px;
+											
+											&:hover {
+												color: $hover_color;
+												border-bottom: none;
+												}
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+										color: white;
+										
+										&:hover {
+											border-bottom: 2px solid $hover_color;
+											}
+                }
+            }
+        }
+    }
+
+}
+
+/* Content */
+main{
+		grid-area: main;
+		display: flex;
+		img{
+			width: 100%;
+			height: auto;
+			display:block;
+			
+		}
+		
+
+		.about{
+			width: 100%;
+			text-align: center;
+			
+			background: url(../img/.png);
+			box-shadow: #00000033 0 4px 2px -2px;
+			border-radius: 15px;
+			background-color: #e1ebff;
+			font-weight: 100;
+			font-size: 15px;
+			padding: 10px 40px;
+	
+			p {
+					color: #3a3a3a;
+			}
+	}
+}
+
+
+
+/* Footer */
+footer{
+    grid-area: footer;
+		background: $bg-head-footer;
+		
+		p {
+		color: #ffffff;
+		text-align: center;
+		font-style: italic;
+		font-size: 10px;
+		}
+}
