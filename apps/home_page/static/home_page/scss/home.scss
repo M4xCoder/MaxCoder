@@ -1,15 +1,112 @@
-.about{
-    width: 90%;
-    text-align: center;
-    background-color: #fafafa;
-    border-radius: 15px;
-    box-shadow: #00000033 0 4px 2px -2px;
-    font-weight: 100;
-    font-size: 15px;
-    margin: 48px auto;
-    padding: 10px 40px;
+@import "mixin";
 
-    p {
-        color: #3a3a3a;
-    }
+$hover_color: #00cfd6;
+
+
+/* Content */
+main {
+  grid-area: main;
+  display: flex;
 }
+
+.content__wrapper {
+  display: grid;
+  grid-template-areas: "header header header" "about about about" "work work work";
+  grid-template-rows: 90vmin 1fr 1fr;
+  grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
+  grid-row-gap: 2px;
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  grid-area: header;
+  @include backraund__content;
+
+
+  .header__head {
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .header__img {
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+/* About */
+
+.about {
+  grid-area: about;
+  @include backraund__content;
+  background-color: white;
+  flex-flow: column nowrap;
+
+  .about__head {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .about__wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1rem;
+    margin: 0;
+
+
+    .about__img {
+      padding-bottom: 30px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .about__text {
+      text-align: center;
+      font-weight: 100;
+      font-size: 15px;
+      padding: 10px 10%;
+
+      p {
+        color: #3a3a3a;
+      }
+    }
+  }
+}
+
+/* Work */
+
+.work {
+  grid-area: work;
+  @include backraund__content;
+}
+
+.work__head {
+    text-align: center;
+
+    h2 {
+      margin: 5px 0;
+    }
+
+    p{
+      margin: 0;
+    }
+  }

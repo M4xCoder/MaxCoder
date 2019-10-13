@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="description" content=""/>
     <meta name="author" lang="en" content="Pritvor69"/>
-    <meta name="copyright" lang="en" content="maxjournal.ru"/>
+    <meta name="copyright" lang="en" content="maxcoder.ru"/>
     <title>{{ pagename }}</title>
     <link rel="apple-touch-icon" sizes="180x180" href={% static "base/img/favicon180*180.png" %}>
     <link rel="icon" type="image/png" sizes="32x32" href={% static "base/img/favicon32*32.png" %}>
@@ -26,78 +26,38 @@
 </head>
 
 <body>
+<div class="wrapper">
 
-<!-- Page Header -->
-<header class="container-fluid">
-    <div class="logo row justify-content-md-between justify-content-around">
-
-        <!-- Navigation -->
-        <div class="col-auto mr-2">
-            <nav class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col ml-2">
-                        <a href="#"><img src={% static "base/img/logo.png" %} class="graphic__logo" alt="logo"></a>
-                    </div>
-                    <div class="col-auto">
-                        <div class="topnav row justify-content-center no-gutters">
-                            <div class="col-auto">
-                                <a href="/">Главная</a>
-                            </div>
-                            <div class="col-auto">
-                                <a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a>
-                            </div>
-                            <div class="col-auto">
-                                <a href="/shop">Программы и сервисы</a>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#">Контакты</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="col-auto mr-2">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <a href="#"><img src={% static "base/img/logo.png" %} alt="logo"></a>
+            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a></li>
+            <li><a href="/shop">Программы и сервисы</a></li>
+            <li><a href="/">Контакты</a></li>
             {% if not request.user.is_authenticated %}
-                <div class="col">
-                    <div class="logInOut row justify-content-center no-gutters">
-                        <div class="col-auto">
-                            <a href="{% url 'account_login' %}"><i class="fa  fa-mail-forward"> Вход</i></a>
-                        </div>
-                    </div>
-                </div>
+                <li><a href="{% url 'account_login' %}"><i class="fa fa-mail-forward"> Вход</i></a></li>
             {% endif %}
             {% if request.user.is_authenticated %}
-                <div class="col">
-                    <div class="logInOut row justify-content-center no-gutters">
-                        <div class="col-auto">
-                            <a href="{% url 'profile' %}">Личный кабинет</a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="{% url 'account_logout' %}">Выход</a>
-                        </div>
-                    </div>
-                </div>
+                <li><a href="{% url 'profile' %}">Личный кабинет</a></li>
+                <li><a href="{% url 'account_logout' %}">Выход</a></li>
             {% endif %}
-        </div>
 
-    </div>
-</header>
+        </ul>
+    </nav>
 
-<!-- Main Content -->
-<main class="container-fluid">
-    {% block content %}{% endblock content %}
-</main>
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
 
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; MaxCoder 2019г</p>
+    </footer>
 
-<!-- Footer -->
-<footer class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <p>Copyright &copy; MaxCoder 2019г</p>
-        </div>
-    </div>
-</footer>
+</div>
 
 <!-- JavaScript -->
 {% block render_js %}{% endblock render_js %}

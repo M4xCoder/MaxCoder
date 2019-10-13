@@ -1,0 +1,10 @@
+@mixin backraund__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e1ebff;
+  background-image: url(../img/bg02.png);
+  background-repeat: repeat;
+  box-shadow: #00000033 0 4px 2px -2px;
+}
