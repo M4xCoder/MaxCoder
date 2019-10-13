@@ -13,7 +13,7 @@ body {
 .wrapper {
   display: grid;
   grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
-  grid-template-rows: minmax(70px, 10vh) 1fr 100px;
+  grid-template-rows: 10vh 1fr 100px;
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
   grid-row-gap: 2px;
   margin: 0;

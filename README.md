@@ -2,6 +2,7 @@
 
 
 ### Описание проекта:
+Персональный сайт-блог.
 
 ### Инструменты разработки
 
@@ -10,17 +11,12 @@
 - Django >= 2
 - PostgreSQL
 
-**Как работаем:**
-- Все предложения и найденные ошибки добавляются в виде Issues на GitHub всеми желающими
-- Пулреквесты по таскам предлагаются всеми желающими, в комментариях к таскам люди пишут что начали делать и когда планируют закончить.
-- Пул реквесты обсуждаются командой и сливаются в мастер.
 
 **Ссылки**:
 - [Сайт](https://maxcoder.ru)
 - [Доска в Trello](https://trello.com/)
 - [Ошибки/Вопросы/Предложения](https://)
 
-**Как стать членом команды**:
 
 ## Разработка
 
@@ -36,15 +32,15 @@
     
 ##### 4) Активировать виртуальное окружение
 
-##### 5) В local_settings.py и прописать конект к базе
+##### 5) В local_settings.py и прописать конект к базе если будете использовать PostgreSQL.
 
 ##### 6) Устанавливить зависимости:
 
-    pip install -r req.txt
+    pip install -r requirements.txt
 
 ##### 7) Выполнить команду для выполнения миграций
 
-    python manage.py deploy
+    python manage.py migrate
     
 ##### 8) Создать суперпользователя
 
@@ -82,15 +78,11 @@
 
 ##### Разработка осуществляется через ветку develop
 
-## Команда
+## Разработчик:
 
 [Pritvor69](https://github.com/pritvor69) 
 
-## License
-
-[BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause)
-
-Copyright (c) 2019-present, pritvor69- Astrakhantsev Maxim
+Copyright (c) 2019-present, pritvor69- Maxim Astrakhantsev 
 
 
 

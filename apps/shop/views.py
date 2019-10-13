@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 def shop_page(request):
-    pagename = 'MaxJournal'
+    pagename = 'MaxCoder'
     return render(request, 'shop.html', {'pagename': pagename})
