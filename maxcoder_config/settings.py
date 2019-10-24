@@ -18,18 +18,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'apps.accounts',  # My application. Is put ahead allauth, to replace patterns.
-    # Download application.
+    # Download
     'analytical',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
     # My application.
-    'apps.home_page',
-    'apps.blog',
-    'apps.shop',
+    'backend.home_page',
+    'backend.blog',
+    'backend.shop',
+    'backend.profile'
 ]
 
 # Allauth settings
@@ -62,7 +61,7 @@ ROOT_URLCONF = 'maxcoder_config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'maxcoder_config/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'src/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,9 +112,8 @@ USE_TZ = True
 
 #################################################3
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'public/static/')  # Путь для сбора всех статических файлов
+STATIC_DIR = os.path.join(BASE_DIR, 'src/static/')
+STATICFILES_DIRS = [STATIC_DIR, ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'public/media/')  # Путь для хранения загружаемых данных проекта
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'maxcoder_config/static/')]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'src/media/')  # Путь для хранения загружаемых данных проекта

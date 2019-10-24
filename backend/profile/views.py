@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
-from apps.accounts.models import LicenseBrickDesign
+from .models import LicenseBrickDesign
 
 
 class ProfilePage(View):
