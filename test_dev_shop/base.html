@@ -9,10 +9,28 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <div></div>
-        <div></div>
+<div class="main__wrapper">
+    <div class="nav__main">
+
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a></li>
+            <li><a href="/shop">Программы и сервисы</a></li>
+            <li><a href="/">Контакты</a></li>
+        </ul>
+
     </div>
-    
+
+    <div class="body__main">
+
+        <h3>BrickDesignBD001</h3>
+        <p>BrickDesignBD001 - это графическое приложение, конструктор кирпичной кладки, позволяющее создать как обычную
+            текстуру,
+            так и процедурные карты к ней, для получения 3D материала.</p>
+
+    </div>
+
+</div>
+
 </body>
 </html>
