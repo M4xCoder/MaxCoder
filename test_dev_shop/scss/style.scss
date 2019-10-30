@@ -1,8 +1,10 @@
+$hover_color: #00cfd6;
+
 .main__wrapper{
     display: grid;
     display: grid;
-    grid-template-areas: "nav__main body__main" "nav__main body__main";
-    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "nav__main body__main" "nav__main body__main" "nav__main body__main";
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 30% 1fr ;
     grid-row-gap: 2px;
     margin: 0;
@@ -11,6 +13,38 @@
 
 .nav__main{
     grid-area: nav__main;
+
+     ul {
+         display: flex;
+         flex-flow: column;
+         width: 100%;
+         align-items: center;
+         margin: 0;
+         padding: 0;
+
+         li {
+             list-style: none;
+             white-space: nowrap;
+             margin: 10px;
+
+
+             a {
+                 text-decoration: none;
+                 border: 2px solid #504f4f;
+                 background-color: #ff8c4b;
+                 padding: 5px 10px;
+                 border-radius: 4px;
+                 cursor: pointer;
+                 color: #000000;
+                 outline: none;
+                 font-size: 15px;
+
+                 &:hover {
+                     color: $hover_color;
+                 }
+             }
+         }
+     }
 }
 
 .body__main{

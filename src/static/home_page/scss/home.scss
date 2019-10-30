@@ -11,8 +11,12 @@ main {
 
 .content__wrapper {
   display: grid;
-  grid-template-areas: "header header header" "about about about" "work work work";
-  grid-template-rows: 90vmin 1fr 1fr;
+  grid-template-areas: "header header header"
+                       "about about about"
+                       "blog blog blog"
+                       "work work work"
+                       "contacts contacts contacts";
+  grid-template-rows: 90vmin 1fr 1fr 1fr 1fr;
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
   grid-row-gap: 2px;
   margin: 0;
@@ -92,11 +96,31 @@ header {
   }
 }
 
+/* Blog */
+
+.last__blog__post{
+  grid-area: blog;
+  @include backraund__content;
+
+  .last__blog__post__head {
+    text-align: center;
+
+    h2 {
+      margin: 5px 0;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+}
+
 /* Work */
 
 .work {
   grid-area: work;
   @include backraund__content;
+  background-color: white;
 }
 
 .work__head {
@@ -110,3 +134,22 @@ header {
       margin: 0;
     }
   }
+
+/* Blog */
+
+.contacts{
+  grid-area: contacts;
+  @include backraund__content;
+
+  .contacts__head {
+    text-align: center;
+
+    h2 {
+      margin: 5px 0;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+}
