@@ -10,13 +10,29 @@
 <body>
 
 <div class="main__wrapper">
+
     <div class="nav__main">
+            <ul>
+                <li>
+                     <a href="/">Программы</a>
+                </li>
+                <li>
+                     <a href="/">Сервисы</a>
+                </li>
+            </ul>
+    </div>
 
+    <div class="nav__body__main">
         <ul>
-            <li><a href="/">Программы</a></li>
-            <li><a href="{% url 'blog:blog_posts_list_url' %}">Сервисы</a></li>
+            <li>
+                <h3>Категории</h3>
+                <ul>
+                    <li>
+                        <p>Дизайн и графика</p>
+                    </li>
+                </ul>
+            </li>
         </ul>
-
     </div>
 
     <div class="body__main">

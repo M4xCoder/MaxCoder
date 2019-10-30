@@ -1,52 +1,70 @@
 $hover_color: #00cfd6;
 
-.main__wrapper{
-    display: grid;
-    display: grid;
-    grid-template-areas: "nav__main body__main" "nav__main body__main" "nav__main body__main";
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 30% 1fr ;
-    grid-row-gap: 2px;
-    margin: 0;
-    height: 100vmin;
+.main__wrapper {
+  display: grid;
+  grid-template-areas: "nav__main nav__main" "nav__body__main body__main";
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 2px;
+  margin: 0;
+  height: 100vmin;
 }
 
-.nav__main{
-    grid-area: nav__main;
+.nav__main {
+  grid-area: nav__main;
+  display: flex;
+  border-bottom: 2px red solid;
 
-     ul {
-         display: flex;
-         flex-flow: column;
-         width: 100%;
-         align-items: center;
-         margin: 0;
-         padding: 0;
-
-         li {
-             list-style: none;
-             white-space: nowrap;
-             margin: 10px;
+  ul {
+    display: flex;
+    justify-content: start;
+    width: 100%;
 
 
-             a {
-                 text-decoration: none;
-                 border: 2px solid #504f4f;
-                 background-color: #ff8c4b;
-                 padding: 5px 10px;
-                 border-radius: 4px;
-                 cursor: pointer;
-                 color: #000000;
-                 outline: none;
-                 font-size: 15px;
+    li {
+      list-style: none;
+      white-space: nowrap;
+    }
 
-                 &:hover {
-                     color: $hover_color;
-                 }
-             }
-         }
-     }
+    a {
+      display: block;
+      font-weight: 600;
+      color: #e5f8ff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      font-size: 15px;
+      background: rgb(118, 155, 255);
+      user-select: none;
+      padding: .5em 2em;
+      outline: none;
+      border: 2px solid;
+      border-radius: 40px 0 40px 0;
+      transition: 0.2s;
+
+      &:hover {
+        background: rgb(0, 117, 223);
+      }
+    }
+  }
 }
 
-.body__main{
-    grid-area: body__main;
+.nav__body__main{
+  grid-area: nav__body__main;
+
+  ul{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+
+
+    li {
+      list-style: none;
+      white-space: nowrap;
+    }
+  }
+}
+
+.body__main {
+  grid-area: body__main;
+  text-align: center;
 }
