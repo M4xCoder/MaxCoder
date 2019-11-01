@@ -2,27 +2,33 @@ $hover_color: #00cfd6;
 
 .main__wrapper {
   display: grid;
-  grid-template-areas: "nav__main nav__main" "nav__body__main body__main";
+  grid-template-areas: ". nav__main nav__main ." ". nav__body__main body__main .";
   grid-template-rows: auto 1fr;
+  grid-template-columns: 5% auto auto 5%;
   grid-row-gap: 2px;
   margin: 0;
   height: 100vmin;
+  background-color: #e1ebff;
 }
 
 .nav__main {
   grid-area: nav__main;
   display: flex;
-  border-bottom: 2px red solid;
+  justify-content: center;
 
   ul {
     display: flex;
-    justify-content: start;
-    width: 100%;
+    width: 98%;
+    margin: 0;
+    padding: 0 0 0 25px;
 
 
     li {
       list-style: none;
       white-space: nowrap;
+      margin:  0 0 0 -25px;
+      padding: 0;
+      width: 100%;
     }
 
     a {
@@ -38,28 +44,49 @@ $hover_color: #00cfd6;
       padding: .5em 2em;
       outline: none;
       border: 2px solid;
-      border-radius: 40px 0 40px 0;
+      border-radius: 10px 40px 10px 40px;
       transition: 0.2s;
 
       &:hover {
         background: rgb(0, 117, 223);
       }
+
+      &.active{
+        background: rgb(0, 117, 223);
+      }
+
     }
   }
 }
 
-.nav__body__main{
+.nav__body__main {
   grid-area: nav__body__main;
+  padding: 0 15px;
 
-  ul{
+  h3 {
+    white-space: nowrap;
+    margin: 10px 0;
+  }
+
+
+  ul {
     display: flex;
     justify-content: start;
     width: 100%;
+    margin: 0 0 0 20px;
+    padding: 0;
 
 
     li {
-      list-style: none;
       white-space: nowrap;
+
+      a {
+        padding: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        white-space: nowrap;
+        font-weight: bolder;
+      }
     }
   }
 }
