@@ -16,7 +16,7 @@ main {
                        "blog blog blog"
                        "work work work"
                        "contacts contacts contacts";
-  grid-template-rows: 90vmin 1fr 1fr 1fr 1fr;
+  grid-template-rows: 90vmin repeat(4, 1fr);
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
   grid-row-gap: 2px;
   margin: 0;

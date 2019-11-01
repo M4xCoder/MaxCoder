@@ -1,0 +1,6 @@
+@media screen and (max-width: 700px) {
+  .main__wrapper {
+  grid-template-areas: "nav__main nav__main" "nav__body__main nav__body__main" "body__main body__main";
+  grid-template-rows: auto auto 1fr;
+}
+}

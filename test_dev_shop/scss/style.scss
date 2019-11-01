@@ -2,13 +2,13 @@ $hover_color: #00cfd6;
 
 .main__wrapper {
   display: grid;
-  grid-template-areas: ". nav__main nav__main ." ". nav__body__main body__main .";
+  grid-template-areas: "nav__main nav__main" "nav__body__main body__main";
   grid-template-rows: auto 1fr;
-  grid-template-columns: 5% auto auto 5%;
+  grid-template-columns: auto 1fr;
   grid-row-gap: 2px;
   margin: 0;
   height: 100vmin;
-  background-color: #e1ebff;
+  background-color: #E1EBFF;
 }
 
 .nav__main {
@@ -20,7 +20,7 @@ $hover_color: #00cfd6;
     display: flex;
     width: 98%;
     margin: 0;
-    padding: 0 0 0 25px;
+    padding: 10px 10px 10px 35px;
 
 
     li {
@@ -34,12 +34,12 @@ $hover_color: #00cfd6;
     a {
       display: block;
       font-weight: 600;
-      color: #e5f8ff;
+      color: black;
       text-decoration: none;
       letter-spacing: 1px;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
       font-size: 15px;
-      background: rgb(118, 155, 255);
+      background: #FFF9E6;
       user-select: none;
       padding: .5em 2em;
       outline: none;
@@ -48,11 +48,12 @@ $hover_color: #00cfd6;
       transition: 0.2s;
 
       &:hover {
-        background: rgb(0, 117, 223);
+        background: #C6D5F2;
       }
 
       &.active{
-        background: rgb(0, 117, 223);
+        background: #E1EBFF;
+        border-bottom: none;
       }
 
     }
@@ -94,4 +95,8 @@ $hover_color: #00cfd6;
 .body__main {
   grid-area: body__main;
   text-align: center;
+  border: 2px red solid;
 }
+
+
+@import "response";
