@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .body__main {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-self: center;
@@ -47,4 +47,8 @@
       margin: 0;
     }
   }
+
+   .product__card__button {
+     flex-direction: column;
+   }
 }

@@ -1,0 +1,22 @@
+@mixin button {
+  display: block;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: $shadow;
+  font-size: 15px;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 10px 40px 10px 40px;
+  transition: 0.2s;
+  text-align: center;
+  background: #768D47;
+
+  &:hover {
+    color: white;
+    background: #2D5B5B;
+  }
+}

@@ -1,3 +1,5 @@
+@import "mixin";
+
 $hover_color: #00cfd6;
 $shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 $background: #E9E9E9;
@@ -35,26 +37,7 @@ $background: #E9E9E9;
     }
 
     a {
-      display: block;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      letter-spacing: 1px;
-      text-shadow: $shadow;
-      font-size: 15px;
-      user-select: none;
-      padding: .5em 2em;
-      outline: none;
-      border: 2px solid;
-      border-radius: 10px 40px 10px 40px;
-      transition: 0.2s;
-      text-align: center;
-      background: #768D47;
-
-      &:hover {
-        color: white;
-        background: #2D5B5B;
-      }
+      @include button;
 
       &.active {
         font-size: 18px;
@@ -130,10 +113,6 @@ $background: #E9E9E9;
   font-weight: 100;
   background-color: white;
   border-radius: 15px;
-
-  &:hover {
-    background-color: #c5c5c5;
-  }
 }
 
 .product__card__head {
@@ -167,25 +146,26 @@ $background: #E9E9E9;
   padding: 20px;
 
   p {
-    font-size: 13px;
+    font-size: 15px;
     color: black;
     padding: 10px;
     margin: 0;
 
-    span{
+    span {
       color: #3a3a3a;
     }
   }
+}
+
+.product__card__button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
 
   a {
-    padding: 5px;
-    font-size: 17px;
-    white-space: nowrap;
-    outline: none;
-  }
-
-  a:hover {
-    color: #3a3a3a;
+    @include button;
+    margin: 5px;
   }
 }
 
