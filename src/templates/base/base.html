@@ -51,6 +51,7 @@
     <!-- Main Content -->
     <main>
         {% block content %}{% endblock content %}
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa  fa-angle-up"></i></button>
     </main>
 
     <!-- Footer -->
@@ -61,6 +62,7 @@
 </div>
 
 <!-- JavaScript -->
+<script src={% static "base/js/base.js" %}></script>
 {% block render_js %}{% endblock render_js %}
 
 </body>
