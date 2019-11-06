@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+{% extends "base/base.html" %}
+{% load static %}
 
-<div class="main__wrapper">
+{% block render_css %}
+    <link rel="stylesheet" href={% static "shop/css/shop.css" %}>
+{% endblock render_css %}
+
+{% block content %}
+    <div class="main__wrapper">
 
     <div class="nav__main">
         <ul>
@@ -32,31 +29,28 @@
     </div>
 
     <div class="body__main">
-        <div class="product__card">
+
+        <a href="#" class="product__card">
+
             <div class="product__card__head">
                 <h3>BrickDesignBD001</h3>
             </div>
             <div class="product__card__img">
-                <img src="./img/brickdesigner_icon_256.png" alt="brickdesigner">
+                <img src={% static "shop/img/brickdesigner_icon_256.png" %} alt="brickdesigner">
             </div>
             <div class="product__card__text">
                 <p>BrickDesignBD001 - графическое приложение, конструктор кирпичной кладки, позволяющее создать как обычную
             текстуру, так и процедурные карты к ней, для получения 3D материала.</p>
-                <p><span>Платформа:</span> PC <br>
+                <p class="product__card__platform"><span>Платформа:</span> PC <br>
                     <span>Язык интерфейса: </span> Английский <br>
                     <span>Версия ОС: </span> Windows 10, Windows 7, Windows 8, Windows 8.1 <br>
                     <span>Тип ПО:</span> Прикладные программы <br>
                 </p>
             </div>
-            <div class="product__card__button">
-                <a href="#">Подробнее</a>
-            </div>
-        </div>
 
+        </a>
 
     </div>
-
 </div>
 
-</body>
-</html>
+{% endblock content %}

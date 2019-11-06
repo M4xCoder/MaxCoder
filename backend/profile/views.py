@@ -7,11 +7,11 @@ class ProfilePage(View):
 
     def get(self, request):
         pagename = 'MaxCoder'
-        return render(request, 'profile.html', {'pagename': pagename})
+        return render(request, 'profile/profile.html', {'pagename': pagename})
 
 class LicensePage(View):
 
     def get(self, request):
         pagename = 'MaxCoder'
         user = request.user
-        return render(request, 'license.html', {'pagename': pagename, 'user': user})
+        return render(request, 'profile/license.html', {'pagename': pagename, 'user': user})

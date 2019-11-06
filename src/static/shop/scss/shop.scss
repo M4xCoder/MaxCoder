@@ -2,7 +2,15 @@
 
 $hover_color: #00cfd6;
 $shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-$background: #E9E9E9;
+$background: #fafafa;
+
+.wrapper {
+  grid-template-areas: "nav nav nav" ". main ." "footer footer footer";
+}
+
+.main {
+  height: 100vmin;
+}
 
 .main__wrapper {
   display: grid;
@@ -10,8 +18,8 @@ $background: #E9E9E9;
   grid-template-rows: auto 1fr;
   grid-template-columns: auto 1fr;
   grid-row-gap: 2px;
-  margin: 0;
-  background-color: $background;
+  margin: 15px;
+  border-radius: 15px;
 }
 
 /* Navigation common */
@@ -25,7 +33,7 @@ $background: #E9E9E9;
     display: flex;
     width: 98%;
     margin: 0;
-    padding: 30px 10px 10px 35px;
+    padding: 0 10px 0 35px;
 
 
     li {
@@ -43,8 +51,9 @@ $background: #E9E9E9;
         font-size: 18px;
         border-color: black;
         border-bottom: none;
+        box-shadow: none;
         color: black;
-        background: $background;
+        background: white;
       }
 
     }
@@ -84,7 +93,7 @@ $background: #E9E9E9;
         font-weight: bolder;
 
         &:hover {
-          color: #2D5B5B;
+          color: $hover_color;
         }
 
       }
@@ -102,6 +111,15 @@ $background: #E9E9E9;
   grid-gap: 1rem;
   padding-top: 70px;
   margin: 15px;
+
+  a{
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+      background-color: #E3E3E3;
+    }
+  }
 }
 
 .product__card {
@@ -111,8 +129,10 @@ $background: #E9E9E9;
   justify-content: center;
   flex-flow: row wrap;
   font-weight: 100;
-  background-color: white;
+  background-color: $background;
   border-radius: 15px;
+  border: 1px #ff7600 solid;
+  box-shadow: 3px 3px 3px rgba(255, 118, 0, 0.5);
 }
 
 .product__card__head {
@@ -134,8 +154,7 @@ $background: #E9E9E9;
     width: 75px;
     height: 75px;
     display: block;
-    margin: 10px;
-    padding: 15px;
+    padding: 5px;
   }
 }
 
@@ -143,29 +162,21 @@ $background: #E9E9E9;
   display: flex;
   width: calc(100% - 150px);
   flex-direction: column;
-  padding: 20px;
+
 
   p {
-    font-size: 15px;
+    font-size: 13px;
     color: black;
     padding: 10px;
     margin: 0;
 
+    &.product__card__platform {
+      font-size: 11px;
+    }
+
     span {
       color: #3a3a3a;
     }
-  }
-}
-
-.product__card__button {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-
-
-  a {
-    @include button;
-    margin: 5px;
   }
 }
 

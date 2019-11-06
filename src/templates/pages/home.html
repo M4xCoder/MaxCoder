@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends "base/base.html" %}
 {% load static %}
 
 {% block render_css %}
-    <link rel="stylesheet" href={% static "home_page/css/home.css" %}>
+    <link rel="stylesheet" href={% static "pages/css/home.css" %}>
 {% endblock render_css %}
 
 {% block content %}
@@ -14,7 +14,7 @@
                 <p> и разработка программного обеспечения.</p>
             </div>
             <div class="header__img">
-                <img src={% static "home_page/img/header.png" %} alt="header">
+                <img src={% static "pages/img/header.png" %} alt="header">
             </div>
         </header>
 
@@ -28,7 +28,7 @@
             <div class="about__wrapper">
 
                 <div class="about__img">
-                    <img src={% static "home_page/img/about.jpg" %} alt="about">
+                    <img src={% static "pages/img/about.jpg" %} alt="about">
                 </div>
 
                 <div class="about__text">
