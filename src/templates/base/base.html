@@ -30,8 +30,8 @@
 
     <!-- Navigation -->
     <nav>
-        <ul>
-            <a href="#"><img src={% static "base/img/logo.png" %} alt="logo"></a>
+        <ul id="myMenu">
+            <a href="#" class="logo"><img src={% static "base/img/logo.png" %} alt="logo"></a>
             <li><a href="/">Главная</a></li>
             <li><a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a></li>
             <li><a href="/shop">Программы и сервисы</a></li>
@@ -44,6 +44,7 @@
                 <li><a href="{% url 'profile' %}">Личный кабинет</a></li>
                 <li><a href="{% url 'account_logout' %}">Выход</a></li>
             {% endif %}
+            <li id="menu"><a href="#"><i class="fa fa-bars"></i></a></li>
 
         </ul>
     </nav>
@@ -51,7 +52,7 @@
     <!-- Main Content -->
     <main>
         {% block content %}{% endblock content %}
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa  fa-angle-up"></i></button>
+        <button onclick="topFunction()" id="myBtn" title="Home"><i class="fa  fa-angle-double-up"></i></button>
     </main>
 
     <!-- Footer -->

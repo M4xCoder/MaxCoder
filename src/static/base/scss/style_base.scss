@@ -50,7 +50,7 @@ nav {
       padding: 0 0 0 20px;
       white-space: nowrap;
 
-      &:last-child {
+      &:nth-last-child(2) {
         margin: 0 35px 0 auto;
 
 
@@ -93,23 +93,37 @@ main {
 /*  Scroll  */
 
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 40px; /* Place the button at the bottom of the page */
-    right: 40px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: rgba(98, 96, 100, 0.31); /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(98, 96, 100, 0.16);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: rgba(85, 85, 85, 0.5);
+}
+
+#menu{
+  display: none;
+}
+/*поведения и структура при экране менее 680 пикселей*/
+@media screen and (max-width: 680px) {
+  #myMenu li:not(:last-child){
+      display: none;
+    }
+  
+  #menu{
+    display: block;
+    margin: 0 35px 0 auto;
+  }
+
+
+
 }
 
 
