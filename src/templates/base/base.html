@@ -30,7 +30,7 @@
 
     <!-- Navigation -->
     <nav>
-        <ul id="myMenu">
+        <ul id="myMenu" class="myMenu">
             <a href="#" class="logo"><img src={% static "base/img/logo.png" %} alt="logo"></a>
             <li><a href="/">Главная</a></li>
             <li><a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a></li>
@@ -44,7 +44,7 @@
                 <li><a href="{% url 'profile' %}">Личный кабинет</a></li>
                 <li><a href="{% url 'account_logout' %}">Выход</a></li>
             {% endif %}
-            <li id="menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+            <li id="btnMenu" class="btnMenu"><a href="#"><i id="btnMenuImg" class="fa fa-angle-double-down"></i></a></li>
 
         </ul>
     </nav>

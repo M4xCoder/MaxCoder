@@ -4,7 +4,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById("myBtn").style.display = "block";
     } else {
         document.getElementById("myBtn").style.display = "none";
@@ -19,4 +19,18 @@ function topFunction() {
         window.scrollBy(0, -100);
         timeOut = setTimeout('topFunction()', 30);
     } else clearTimeout(timeOut);
+}
+
+btnMenu.onclick = function responsiv_menu() {
+    let x = document.getElementById("myMenu");
+    let y = document.getElementById("btnMenuImg");
+
+    if( x.className === "myMenu") {
+        x.className += "_responsiv";
+        y.className = "fa  fa-angle-double-up";
+    }
+    else {
+        x.className = "myMenu";
+        y.className = "fa  fa-angle-double-down";
+    }
 }
