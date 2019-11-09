@@ -15,7 +15,7 @@ main {
                        "blog blog blog"
                        "work work work"
                        "contacts contacts contacts";
-  grid-template-rows: 90vmin repeat(4, 1fr);
+  grid-template-rows: auto repeat(4, 1fr);
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
   grid-row-gap: 2px;
   margin: 0;
@@ -25,7 +25,9 @@ main {
 
 header {
   grid-area: header;
-  @include backraund__content;
+  @include background__content;
+  height: calc(100vh - 67px);
+
 
 
   .header__head {
@@ -51,7 +53,7 @@ header {
 
 .about {
   grid-area: about;
-  @include backraund__content;
+  @include background__content;
   background-color: white;
   flex-flow: column nowrap;
 
@@ -66,7 +68,7 @@ header {
   .about__wrapper {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
     margin: 0;
 
@@ -99,7 +101,7 @@ header {
 
 .last__blog__post{
   grid-area: blog;
-  @include backraund__content;
+  @include background__content;
 
   .last__blog__post__head {
     text-align: center;
@@ -118,7 +120,7 @@ header {
 
 .work {
   grid-area: work;
-  @include backraund__content;
+  @include background__content;
   background-color: white;
 }
 
@@ -138,7 +140,7 @@ header {
 
 .contacts{
   grid-area: contacts;
-  @include backraund__content;
+  @include background__content;
 
   .contacts__head {
     text-align: center;
@@ -152,3 +154,5 @@ header {
     }
   }
 }
+
+@import "response";

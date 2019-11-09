@@ -1,0 +1,24 @@
+@media screen and (max-width: 720px) {
+  header {
+    height: calc(100vh - 117px);
+  }
+
+  .about {
+
+    .about__head {
+      h2 {
+        margin: 15px;
+      }
+    }
+
+    .about__wrapper {
+      .about__img {
+        padding: 0;
+
+        img {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
