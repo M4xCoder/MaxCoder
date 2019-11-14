@@ -20,12 +20,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Download
     'analytical',
+    'captcha',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
     # My application.
-    'backend.home_page',
+    'backend.pages',
     'backend.blog',
     'backend.shop',
     'backend.profile'
