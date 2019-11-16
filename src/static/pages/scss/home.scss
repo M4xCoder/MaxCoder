@@ -10,11 +10,7 @@ main {
 
 .content__wrapper {
   display: grid;
-  grid-template-areas: "header header header"
-                       "about about about"
-                       "blog blog blog"
-                       "work work work"
-                       "contacts contacts contacts";
+  grid-template-areas: "header header header" "about about about" "blog blog blog" "work work work" "contacts contacts contacts";
   grid-template-rows: auto repeat(4, 1fr);
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
   grid-row-gap: 2px;
@@ -27,7 +23,6 @@ header {
   grid-area: header;
   @include background__content;
   height: calc(100vh - 67px);
-
 
 
   .header__head {
@@ -99,7 +94,7 @@ header {
 
 /* Blog */
 
-.last__blog__post{
+.last__blog__post {
   grid-area: blog;
   @include background__content;
 
@@ -110,7 +105,7 @@ header {
       margin: 5px 0;
     }
 
-    p{
+    p {
       margin: 0;
     }
   }
@@ -125,20 +120,20 @@ header {
 }
 
 .work__head {
-    text-align: center;
+  text-align: center;
 
-    h2 {
-      margin: 5px 0;
-    }
-
-    p{
-      margin: 0;
-    }
+  h2 {
+    margin: 5px 0;
   }
+
+  p {
+    margin: 0;
+  }
+}
 
 /* Blog */
 
-.contacts{
+.contacts {
   grid-area: contacts;
   @include background__content;
 
@@ -146,13 +141,85 @@ header {
     text-align: center;
 
     h2 {
-      margin: 5px 0;
+      margin-bottom: 10px;
     }
 
-    p{
-      margin: 0;
+    p {
+      margin: 10px;
     }
   }
+
+  .contacts__wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin: 15px;
+
+    .contacts__social {
+      margin: 15px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-content: start;
+      text-align: center;
+
+      a {
+        padding: 0 0 50px 0;
+      }
+    }
+
+    .contacts__forms {
+      margin: 15px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      .fieldWrapper {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .input__contacts {
+          width: 80%;
+          padding: 10px 6px;
+          margin: 10px 0;
+          display: inline-block;
+          box-sizing: border-box;
+          border-radius: 12px;
+          outline: none;
+        }
+
+        .message__contacts {
+          width: 100%;
+          padding: 10px 6px;
+          margin: 10px 0;
+          display: inline-block;
+          box-sizing: border-box;
+          border-radius: 12px;
+          outline: none;
+        }
+      }
+
+      .contacts__btn {
+        color: black;
+        padding: .5em 2em;
+        outline: none;
+        border: 1px black solid;
+        border-radius: 10px 40px 10px 40px;
+        transition: 0.2s;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        margin-top: 15px;
+
+        &:hover {
+          color: white;
+          background: $hover_color;
+        }
+      }
+    }
+  }
+
+
 }
 
 @import "response";

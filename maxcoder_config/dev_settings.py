@@ -22,4 +22,6 @@ DATABASES = {
     }
 }
 
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
 YANDEX_METRICA_COUNTER_ID = '00000000'

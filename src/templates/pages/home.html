@@ -65,6 +65,36 @@
         <div class="contacts" id="contacts">
             <div class="contacts__head">
                 <h2> Контакты: </h2>
+                <p>По любым вопросам со мной можно связаться написав в форму обратной связи,
+                    или же по следующим координатам:</p>
+            </div>
+
+            <div class="contacts__wrapper">
+
+                <div class="contacts__social">
+                    <a href="#">jkkljljkl;l;lm</a>
+                    <a href="#">jkkljljkl;l;lm</a>
+                    <a href="#">jkkljljkl;l;lm</a>
+                    <a href="#">jkkljljkl;l;lm</a>
+                    <a href="#">jkkljljkl;l;lm</a>
+                </div>
+
+                <div class="contacts__forms">
+                    <form method="POST" action="#contacts">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="fieldWrapper">
+                                {{ field.errors }}
+                                {{ field.label_tag }} {{ field }}
+                                {% if field.help_text %}
+                                    <p class="help">{{ field.help_text|safe }}</p>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        <input class="contacts__btn" type="submit" value="Отправить"/>
+                    </form>
+                </div>
+
             </div>
         </div>
 
