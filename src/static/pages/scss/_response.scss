@@ -20,9 +20,19 @@
     }
   }
 
-  .contacts__forms {
-    text-align: center;
+  .contacts {
+    .contacts__wrapper {
+      .contacts__social{
+        text-align: center;
+        padding: 20px;
+      }
+      .contacts__forms {
+        text-align: center;
+        padding: 10px;
+      }
+    }
   }
+
 
   .fieldWrapper {
     align-items: center;

@@ -17,7 +17,7 @@ function topFunction() {
     let top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     if (top > 0) {
         window.scrollBy(0, -100);
-        timeOut = setTimeout('topFunction()', 30);
+        timeOut = setTimeout('topFunction()', 20);
     } else clearTimeout(timeOut);
 }
 
