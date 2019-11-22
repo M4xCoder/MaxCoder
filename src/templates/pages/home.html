@@ -44,9 +44,15 @@
         </div>
 
         <div class="last__blog__post">
+
             <div class="last__blog__post__head">
                 <h2> Новое в статьях: </h2>
             </div>
+
+            <div class="last__blog__wrapper">
+
+            </div>
+
         </div>
 
         <div class="work">
@@ -63,6 +69,7 @@
         </div>
 
         <div class="contacts" id="contacts">
+
             <div class="contacts__head">
                 <h2> Контакты: </h2>
                 <p>По любым вопросам со мной можно связаться написав в форму обратной связи,
@@ -72,11 +79,13 @@
             <div class="contacts__wrapper">
 
                 <div class="contacts__social">
-                    <a href="#"><i class="fa fa-github-alt"></i><p>GitHub</p></a>
-                    <a href="#"><i class="fa fa-telegram"></i><p>Telegram</p></a>
+                    <a href="https://t-do.ru/pritvor69"><i class="fa fa-telegram"></i>
+                        <p>Telegram: @pritvor69</p></a>
+                    <a href="https://github.com/Pritvor69"><i class="fa fa-github-alt"></i>
+                        <p>GitHub</p></a>
                 </div>
 
-                <div class="contacts__forms">
+                <div class="contacts__mail">
                     <form method="POST" action="#contacts">
                         {% csrf_token %}
                         {% for field in form %}
@@ -96,4 +105,5 @@
         </div>
 
     </div>
+
 {% endblock content %}

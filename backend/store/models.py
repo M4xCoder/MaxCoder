@@ -21,13 +21,19 @@ def image_folder(instance, filename):
     return '{0}/{1}'.format(instance.slug, filename)
 
 
-class Category(models.Model):
+class Section(models.Model):
     name = models.CharField(max_length=120)
     slug = models.SlugField(blank=True)
 
     def __str__(self):
         return self.name
 
+class Category(models.Model):
+    name = models.CharField(max_length=120)
+    slug = models.SlugField(blank=True)
+
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)

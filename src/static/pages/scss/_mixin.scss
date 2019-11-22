@@ -8,3 +8,11 @@
   background-repeat: repeat;
   box-shadow: #00000033 0 4px 2px -2px;
 }
+
+@mixin common__wrapper{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin: 0;
+}

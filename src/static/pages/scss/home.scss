@@ -61,12 +61,7 @@ header {
   }
 
   .about__wrapper {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
-    margin: 0;
-
+    @include common__wrapper;
 
     .about__img {
       padding-bottom: 30px;
@@ -131,7 +126,7 @@ header {
   }
 }
 
-/* Blog */
+/* Contacts */
 
 .contacts {
   grid-area: contacts;
@@ -150,10 +145,7 @@ header {
   }
 
   .contacts__wrapper {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
+    @include common__wrapper;
     margin: 15px;
 
     .contacts__social {
@@ -195,7 +187,7 @@ header {
       }
     }
 
-    .contacts__forms {
+    .contacts__mail {
       padding: 20px 20% 10px 10%;
       display: flex;
       flex-flow: column nowrap;
@@ -207,7 +199,7 @@ header {
 
         .input__contacts {
           width: 80%;
-          padding: 10px 6px;
+          padding: 8px 4px;
           margin: 10px 0;
           display: inline-block;
           box-sizing: border-box;
@@ -217,7 +209,7 @@ header {
 
         .message__contacts {
           width: 100%;
-          padding: 10px 6px;
+          padding: 8px 4px;
           margin: 10px 0;
           display: inline-block;
           box-sizing: border-box;

@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     # My application.
     'backend.pages',
     'backend.blog',
-    'backend.shop',
+    'backend.store',
     'backend.profile'
 ]
 
@@ -113,8 +113,7 @@ USE_TZ = True
 
 #################################################3
 STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'src/static/')
-STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'src/static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'src/media/')  # Путь для хранения загружаемых данных проекта

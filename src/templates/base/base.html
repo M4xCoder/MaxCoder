@@ -34,7 +34,7 @@
             <a href="#" class="logo"><img src={% static "base/img/logo.png" %} alt="logo"></a>
             <li><a href="/">Главная</a></li>
             <li><a href="{% url 'blog:blog_posts_list_url' %}">Статьи</a></li>
-            <li><a href="/shop">Программы и сервисы</a></li>
+            <li><a href="/store">Программы и сервисы</a></li>
             <li><a href="/#contacts">Контакты</a></li>
             <li><a href="/#about">Обо мне</a></li>
             {% if not request.user.is_authenticated %}

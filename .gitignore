@@ -3,6 +3,6 @@
 /maxcoder_config/prod_settings.py
 /.idea
 /backend/blog/migrations/0001_initial.py
-/backend/shop/migrations/0001_initial.py
+/backend/store/migrations/0001_initial.py
 /backend/profile/migrations/0001_initial.py
 /deploy_config/save_text.txt
