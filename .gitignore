@@ -6,3 +6,4 @@
 /backend/store/migrations/0001_initial.py
 /backend/profile/migrations/0001_initial.py
 /deploy_config/save_text.txt
+/src/static/admin/

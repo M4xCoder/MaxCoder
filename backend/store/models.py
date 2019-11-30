@@ -36,6 +36,7 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
+    section = models.ForeignKey(Section, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=120)
     slug = models.SlugField()

@@ -113,7 +113,8 @@ USE_TZ = True
 
 #################################################3
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'src/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'src/static')]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'src/media/')  # Путь для хранения загружаемых данных проекта
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Путь для хранения загружаемых данных проекта
