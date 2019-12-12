@@ -1,4 +1,7 @@
 @media screen and (max-width: 720px) {
+  nav{
+    position: relative;
+  }
 
   .myMenu li:not(:last-child) {
     display: none;

@@ -8,10 +8,6 @@ $background: #fafafa;
   grid-template-areas: "nav nav nav" ". main ." "footer footer footer";
 }
 
-.main {
-  height: 100vmin;
-}
-
 .main__wrapper {
   display: grid;
   grid-template-areas: "nav__main nav__main" "nav__body__main body__main";

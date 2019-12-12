@@ -2,6 +2,9 @@
 
 $hover_color: #00cfd6;
 
+.anchor {
+  padding-top: 60px;
+}
 
 /* Content */
 main {
@@ -11,9 +14,8 @@ main {
 .content__wrapper {
   display: grid;
   grid-template-areas: "header header header" "about about about" "blog blog blog" "work work work" "contacts contacts contacts";
-  grid-template-rows: auto repeat(4, 1fr);
+  grid-template-rows: 1fr;
   grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
-  grid-row-gap: 2px;
   margin: 0;
 }
 
@@ -22,7 +24,7 @@ main {
 header {
   grid-area: header;
   @include background__content;
-  height: calc(100vh - 67px);
+  height: 100vmin;
 
 
   .header__head {
@@ -50,13 +52,12 @@ header {
   grid-area: about;
   @include background__content;
   background-color: white;
-  flex-flow: column nowrap;
 
   .about__head {
     text-align: center;
 
-    h2 {
-      margin-bottom: 30px;
+    h2{
+      margin-top: 0;
     }
   }
 
@@ -92,6 +93,7 @@ header {
 .last__blog__post {
   grid-area: blog;
   @include background__content;
+  height: 300px;
 
   .last__blog__post__head {
     text-align: center;
@@ -112,6 +114,7 @@ header {
   grid-area: work;
   @include background__content;
   background-color: white;
+  height: 300px;
 }
 
 .work__head {
@@ -135,12 +138,8 @@ header {
   .contacts__head {
     text-align: center;
 
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin: 10px;
+    h2{
+      margin-top: 0;
     }
   }
 
@@ -181,7 +180,7 @@ header {
           margin-left: 10%;
         }
 
-        p{
+        p {
           margin: 0;
         }
       }

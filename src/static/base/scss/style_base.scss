@@ -31,10 +31,12 @@ nav {
   grid-area: nav;
   display: flex;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   background-image: $bg-head-footer;
   border-radius: 0 0 10px 10px;
   box-shadow: #00000033 0 4px 2px -2px;
+  top: 0 !important;
+  position: fixed;
 
   ul {
     display: flex;
@@ -44,7 +46,7 @@ nav {
     padding: 0;
 
     img {
-      width: 90px;
+      width: 80px;
       height: auto;
       display: block;
       margin: 0 0 0 35px;
