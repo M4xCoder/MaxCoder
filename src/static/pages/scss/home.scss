@@ -3,7 +3,7 @@
 $hover_color: #00cfd6;
 
 .anchor {
-  padding-top: 60px;
+  padding-top: 55px;
 }
 
 /* Content */
@@ -24,18 +24,19 @@ main {
 header {
   grid-area: header;
   @include background__content;
-  height: 100vmin;
 
 
   .header__head {
     text-align: center;
 
     h1 {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 
   .header__img {
+    display: flex;
+    height: calc(100vh - 150px);
 
     img {
       max-width: 100%;
@@ -57,12 +58,13 @@ header {
     text-align: center;
 
     h2{
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
   .about__wrapper {
     @include common__wrapper;
+    height: calc(100vh - 95px);
 
     .about__img {
       padding-bottom: 30px;
@@ -139,13 +141,13 @@ header {
     text-align: center;
 
     h2{
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
   .contacts__wrapper {
     @include common__wrapper;
-    margin: 15px;
+    height: calc(100vh - 137px);
 
     .contacts__social {
       padding-left: 20%;
@@ -159,9 +161,8 @@ header {
         align-items: center;
         color: white;
         text-decoration: none;
-        letter-spacing: 1px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-        font-size: 15px;
+        font-size: 13px;
         padding: .5em 2em;
         margin-bottom: 50px;
         border: 1px black solid;
@@ -187,7 +188,7 @@ header {
     }
 
     .contacts__mail {
-      padding: 20px 20% 10px 10%;
+      padding: 0 20% 10px 10%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
@@ -198,7 +199,8 @@ header {
 
         .input__contacts {
           width: 80%;
-          padding: 8px 4px;
+          padding: 8px;
+          font-size: 13px;
           margin: 10px 0;
           display: inline-block;
           box-sizing: border-box;
@@ -208,7 +210,8 @@ header {
 
         .message__contacts {
           width: 100%;
-          padding: 8px 4px;
+          padding: 8px;
+          font-size: 13px;
           margin: 10px 0;
           display: inline-block;
           box-sizing: border-box;

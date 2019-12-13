@@ -1,46 +1,60 @@
 @media screen and (max-width: 720px) {
 
+  .anchor {
+    padding-top: 0;
+  }
+
   header {
-    height: calc(100vh - 117px);
-  }
+    margin-top: -5px;
 
-  .anchor{
-    padding-top: 20px;
-  }
-
-  .about__head {
-    h2 {
-      margin: 15px;
+    .header__img {
+      height: calc(100vh - 205px);
     }
   }
 
-  .about__wrapper {
-    .about__img {
-      padding: 0;
+  .about {
+    .about__wrapper {
+      .about__img {
+        padding: 0;
 
-      img {
-        padding: 15px;
+        img {
+          padding: 15px;
+        }
       }
     }
   }
 
   .contacts {
     .contacts__wrapper {
-      .contacts__social{
+      height: auto;
+      .contacts__social {
         text-align: center;
-        padding: 20px;
+        padding: 15px;
       }
+
       .contacts__mail {
         text-align: center;
-        padding: 10px;
+        padding: 15px;
       }
     }
   }
 
-
   .fieldWrapper {
     align-items: center;
   }
+}
 
+@media screen and (max-width: 992px) {
 
+  .about {
+    .about__head {
+      h2 {
+        margin: 15px;
+      }
+    }
+
+    .about__wrapper {
+      height: auto;
+    }
+  }
 }
