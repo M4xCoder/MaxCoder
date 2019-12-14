@@ -8,7 +8,8 @@
     margin-top: -5px;
 
     .header__img {
-      height: calc(100vh - 205px);
+      min-height: calc(100vh - 206px);
+      padding-bottom: 10px;
     }
   }
 

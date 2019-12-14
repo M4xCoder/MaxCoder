@@ -36,7 +36,7 @@ header {
 
   .header__img {
     display: flex;
-    height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
 
     img {
       max-width: 100%;
