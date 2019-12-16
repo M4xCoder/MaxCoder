@@ -3,6 +3,10 @@
     position: relative;
   }
 
+  .anchor {
+    padding-top: 0;
+  }
+
   .myMenu li:not(:last-child) {
     display: none;
   }

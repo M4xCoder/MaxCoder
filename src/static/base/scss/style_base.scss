@@ -14,6 +14,12 @@ body {
   font-size: 14px;
 }
 
+/* Padding fixing menu  */
+.anchor {
+  padding-top: 55px;
+}
+/*-----------------------*/
+
 .wrapper {
   display: grid;
   grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
@@ -102,7 +108,6 @@ main {
 }
 
 /*  Scroll  */
-
 #myBtn {
   display: none;
   position: fixed;
@@ -118,6 +123,7 @@ main {
 #myBtn:hover {
   background-color: rgba(85, 85, 85, 0.5);
 }
+/*------------------------------*/
 
 /* Footer */
 

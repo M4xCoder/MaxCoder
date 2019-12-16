@@ -2,8 +2,8 @@
 /db.sqlite3
 /maxcoder_config/prod_settings.py
 /.idea
-/backend/blog/migrations/0001_initial.py
-/backend/store/migrations/0001_initial.py
-/backend/profile/migrations/0001_initial.py
 /deploy_config/save_text.txt
-/src/static/admin/
+/backend/pages/migrations/
+/backend/blog/migrations/
+/backend/profile/migrations/
+/backend/store/migrations/
