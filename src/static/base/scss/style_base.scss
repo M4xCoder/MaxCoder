@@ -1,0 +1,144 @@
+@import "normalize";
+
+$bg-head-footer: url(../img/bg-head-footer.png);
+$font: Arial, sans-serif;
+$hover_color: #00cfd6;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $font;
+  font-size: 14px;
+}
+
+/* Padding fixing menu  */
+.anchor {
+  padding-top: 55px;
+}
+/*-----------------------*/
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
+  grid-row-gap: 2px;
+  margin: 0;
+  height: 100%;
+}
+
+
+/* Navigation */
+
+nav {
+  grid-area: nav;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-image: $bg-head-footer;
+  border-radius: 0 0 10px 10px;
+  box-shadow: #00000033 0 4px 2px -2px;
+  top: 0 !important;
+  position: fixed;
+
+  ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 0 0 35px;
+    }
+
+    li {
+      list-style: none;
+      padding: 0 0 0 20px;
+      white-space: nowrap;
+
+      &:nth-last-child(2) {
+        margin: 0 35px 0 auto;
+
+
+        a {
+          border: 2px solid #504f4f;
+          background-color: #ffffff;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          color: #000000;
+          outline: none;
+          font-size: 13px;
+
+          &:hover {
+            color: $hover_color;
+            border-bottom: none;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          border-bottom: 2px solid $hover_color;
+        }
+      }
+    }
+  }
+}
+
+.btnMenu {
+  display: none;
+}
+
+
+/* Content */
+
+main {
+  grid-area: main;
+}
+
+/*  Scroll  */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgba(98, 96, 100, 0.16);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#myBtn:hover {
+  background-color: rgba(85, 85, 85, 0.5);
+}
+/*------------------------------*/
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+  background: $bg-head-footer;
+  height: 100px;
+
+  p {
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+  }
+}
+
+@import "response";

@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load account socialaccount %}
+
+{% block render_css %}
+    <link rel="stylesheet" href={% static "account/css/login.css" %}>
+{% endblock render_css %}
+
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row block__common justify-content-center">
+          <div class="col-12 block">
+              <h2>Авторизация</h2>
+              <hr>
+              <form class="login" method="POST" action="{% url 'account_login' %}">
+                  {% csrf_token %}
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 fieldWrapper">
+                    {{ form.non_field_errors }}
+                    </div>
+                    <div class="col-12"></div>
+                    <div class="col-12 col-md-4 fieldWrapper">
+                        {{ form.login.errors }}
+                        {{ form.login.label_tag }}
+                        {{ form.login }}
+                    </div>
+                    <div class="col-12"></div>
+                    <div class="col-12 col-md-4 fieldWrapper">
+                        {{ form.password.errors }}
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
+                    </div>
+                  </div>
+                  {% if redirect_field_value %}
+                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  {% endif %}
+                  <div class="row justify-content-around">
+                    <div class="col-3"></div>
+                    <div class="col-12 col-md-2 fieldWrapper">
+                        {{ form.remember.errors }}
+                        {{ form.remember.label_tag }}
+                        {{ form.remember }}
+                    </div>
+                    <div class="col-12 col-md-2 fieldWrapper">
+                      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">Забыли пароль?</a>
+                    </div>
+                    <div class="col-3"></div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col">
+                      <button class="primaryAction" type="submit">Войти</button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+    </div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+

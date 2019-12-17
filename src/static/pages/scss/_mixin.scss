@@ -1,0 +1,18 @@
+@mixin background__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e1ebff;
+  background-image: url(../../base/img/bg02.png);
+  background-repeat: repeat;
+  box-shadow: #00000033 0 4px 2px -2px;
+}
+
+@mixin common__wrapper{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2px;
+  margin: 0;
+}

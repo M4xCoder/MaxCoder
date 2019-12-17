@@ -1,7 +1,7 @@
-"""maxcoder_config URL Configuration
+"""settings_maxjournal URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -13,15 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from .views import store_page
+
+app_name = 'store'
 
 urlpatterns = [
-    path('admin/', admin.site.urls, ),
-    path('', include('backend.pages.urls')),
-    path('', include('allauth.urls')),
-    path('blog/', include('backend.blog.urls', namespace='blog')),
-    path('store/', include('backend.store.urls', namespace='store')),
-    path('accounts/', include('backend.profile.urls')),
-
+    path('', store_page),
 ]

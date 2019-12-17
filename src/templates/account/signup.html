@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load account socialaccount %}
+
+
+{% block render_css %}
+    <link rel="stylesheet" href={% static "account/css/signup.css" %}>
+{% endblock render_css %}
+
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row block__common justify-content-center">
+          <div class="col-12 block">
+            <h2>Регистрация</h2>
+              <hr>
+                <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 fieldWrapper">
+                        {{ form.non_field_errors }}
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-12 col-md-4 fieldWrapper">
+                            {{ form.username.errors }}
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-12 col-md-4 fieldWrapper">
+                            {{ form.email.errors }}
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-12 col-md-4 fieldWrapper">
+                            {{ form.password1.errors }}
+                            {{ form.password1.label_tag }}
+                            {{ form.password1 }}
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-12 col-md-4 fieldWrapper">
+                            {{ form.password2.errors }}
+                            {{ form.password2.label_tag }}
+                            {{ form.password2 }}
+                        </div>
+                  </div>
+                  {% if redirect_field_value %}
+                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  {% endif %}
+                  <button type="submit">Регистрация</button>
+                </form>
+          </div>
+      </div>
+    </div>
+{% endblock content %}

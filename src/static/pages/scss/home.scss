@@ -1,0 +1,241 @@
+@import "mixin";
+
+$hover_color: #00cfd6;
+
+/* Content */
+main {
+  display: flex;
+}
+
+.content__wrapper {
+  display: grid;
+  grid-template-areas: "header header header" "about about about" "blog blog blog" "work work work" "contacts contacts contacts";
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(0, 5%) 1fr minmax(0, 5%);
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  grid-area: header;
+  @include background__content;
+
+
+  .header__head {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  .header__img {
+    display: flex;
+    min-height: calc(100vh - 150px);
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+/* About */
+
+.about {
+  grid-area: about;
+  @include background__content;
+  background-color: white;
+
+  .about__head {
+    text-align: center;
+
+    h2{
+      margin-bottom: 0;
+    }
+  }
+
+  .about__wrapper {
+    @include common__wrapper;
+    height: calc(100vh - 95px);
+
+    .about__img {
+      padding-bottom: 30px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .about__text {
+      text-align: center;
+      font-weight: 100;
+      font-size: 15px;
+      padding: 10px 10%;
+
+      p {
+        color: #3a3a3a;
+      }
+    }
+  }
+}
+
+/* Blog */
+
+.last__blog__post {
+  grid-area: blog;
+  @include background__content;
+  height: 300px;
+
+  .last__blog__post__head {
+    text-align: center;
+
+    h2 {
+      margin: 5px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* Work */
+
+.work {
+  grid-area: work;
+  @include background__content;
+  background-color: white;
+  height: 300px;
+}
+
+.work__head {
+  text-align: center;
+
+  h2 {
+    margin: 5px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Contacts */
+
+.contacts {
+  grid-area: contacts;
+  @include background__content;
+
+  .contacts__head {
+    text-align: center;
+
+    h2{
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts__wrapper {
+    @include common__wrapper;
+    height: calc(100vh - 137px);
+
+    .contacts__social {
+      padding-left: 20%;
+      padding-right: 10%;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        font-size: 13px;
+        padding: .5em 2em;
+        margin-bottom: 50px;
+        border: 1px black solid;
+        border-radius: 10px 40px 10px 40px;
+        transition: 0.2s;
+        text-align: center;
+        background: #418241;
+
+        &:hover {
+          background: $hover_color;
+        }
+
+        i {
+          font-size: 30px;
+          margin-right: 25%;
+          margin-left: 10%;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .contacts__mail {
+      padding: 0 20% 10px 10%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      .fieldWrapper {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .input__contacts {
+          width: 80%;
+          padding: 8px;
+          font-size: 13px;
+          margin: 10px 0;
+          display: inline-block;
+          box-sizing: border-box;
+          border-radius: 12px;
+          outline: none;
+        }
+
+        .message__contacts {
+          width: 100%;
+          padding: 8px;
+          font-size: 13px;
+          margin: 10px 0;
+          display: inline-block;
+          box-sizing: border-box;
+          border-radius: 12px;
+          outline: none;
+        }
+      }
+
+      .contacts__btn {
+        color: black;
+        padding: .5em 2em;
+        outline: none;
+        border: 1px black solid;
+        border-radius: 10px;
+        transition: 0.2s;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        margin-top: 15px;
+
+        &:hover {
+          color: white;
+          background: $hover_color;
+        }
+      }
+    }
+  }
+
+
+}
+
+@import "response";

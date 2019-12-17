@@ -1,0 +1,57 @@
+@media screen and (max-width: 720px) {
+
+  header {
+    margin-top: -5px;
+
+    .header__img {
+      min-height: calc(100vh - 206px);
+      padding-bottom: 10px;
+    }
+  }
+
+  .about {
+    .about__wrapper {
+      .about__img {
+        padding: 0;
+
+        img {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    .contacts__wrapper {
+      height: auto;
+      .contacts__social {
+        text-align: center;
+        padding: 15px;
+      }
+
+      .contacts__mail {
+        text-align: center;
+        padding: 15px;
+      }
+    }
+  }
+
+  .fieldWrapper {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .about {
+    .about__head {
+      h2 {
+        margin: 15px;
+      }
+    }
+
+    .about__wrapper {
+      height: auto;
+    }
+  }
+}
