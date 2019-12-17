@@ -3,7 +3,7 @@
 /maxcoder_config/prod_settings.py
 /.idea
 /deploy_config/save_text.txt
-/backend/pages/migrations/
-/backend/blog/migrations/
-/backend/profile/migrations/
-/backend/store/migrations/
+/backend/blog/migrations/*
+/backend/pages/migrations/*
+/backend/profile/migrations/*
+/backend/store/migrations/*
