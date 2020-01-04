@@ -15,10 +15,10 @@ def home_page(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            recipients = ['pritvor69@bk.ru']
+            recipients = ['admin@maxcoder.ru']
 
             try:
-                send_mail(name, message, 'pritvor69@bk.ru', recipients)
+                send_mail(name, message + 2*'\n'+'От: '+email, 'maxcoder@maxcoder.ru', recipients)
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
             # Переходим на другую страницу, если сообщение отправлено

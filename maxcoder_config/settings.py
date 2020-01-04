@@ -3,12 +3,13 @@ Using Django 2.2.6.
 Using Python 3.7.4
 
 """
+
 try:
     from .dev_settings import *
 except ImportError:
     from .prod_settings import *
 
-# Application definition
+# Application definition >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -18,6 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Download
     'analytical',
     'captcha',
@@ -25,6 +27,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
+
     # My application.
     'backend.pages',
     'backend.blog',
@@ -32,7 +35,7 @@ INSTALLED_APPS = [
     'backend.profile'
 ]
 
-# Allauth settings
+# Allauth settings >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
@@ -45,7 +48,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,8 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'maxcoder_config.wsgi.application'
 
-# Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+# Password validation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,8 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
+# Internationalization >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 LANGUAGE_CODE = 'ru-ru'
 
@@ -108,10 +109,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+# Static files (CSS, JavaScript, Images) >>>>>>>>>>>>>>>>>>>>>>
 
-#################################################3
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'src/static')]
