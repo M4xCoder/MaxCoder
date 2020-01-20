@@ -1,0 +1,59 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block render_css %}
+    <link rel="stylesheet" href={% static "store/css/brick_designer.css" %}>
+{% endblock render_css %}
+
+{% block content %}
+
+    <div class="main__wrapper anchor">
+        <div class="left__column ">
+            <h3>Скачать BrickDesigner BD001 сейчас!</h3>
+            <p>Посмотрите, насколько BrickDesigner может упростить вашу работу по сборке текстуры кирпичной кладки.
+                Попробуйте, это может сэкономить вам много времени!
+                Нажмите, чтобы загрузить полнофункциональную пробную версию с водяными знаками:</p>
+            <div class="download">
+                <div>
+                    <h4>BrickDesigner для Windows</h4>
+                    <p>
+                        <a class="button" href="media/store/brick_designer/brick_designer_BD001.exe" download="">
+                            <img src={% static "store/img/windows-icon.png" %} width="18" height="20"
+                                 alt="Иконка Windows">
+                            Windows
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right__column">
+
+            <h3> Особенности BrickDesigner </h3>
+            <ul>
+                <li>Быстрая сборка бесшовных текстур кирпичной кладки и карт к ним для использования в играх и
+                    трехмерной графике.
+                </li>
+                <li>Просмотр и возможность сохранения слоев с картами:
+                    <ul>
+                        <li>Bump (шероховатостей);</li>
+                        <li>Diffuse (диффузного цвета);</li>
+                        <li>Displacement (смещений);</li>
+                        <li>Normal (нормалей);</li>
+                        <li>Reflection (отражений).</li>
+                    </ul>
+                </li>
+                <li>Возможность сохранения сеанса сборки текстуры, с последующей загрузкой и продолжением сборки</li>
+                <li>Создание и сохранение текстуры с собранным вами рисунком кирпичной кладки из предустановленных
+                    изоображений кирпича 13 цветов
+                </li>
+                <li>Получение бесшовной текстуры даже при смещении по горизонтали на 1/4 или на 1/2 относительно
+                    друг-друга.
+                </li>
+                <li>Доступно для Windows</li>
+            </ul>
+
+
+        </div>
+    </div>
+
+{% endblock content %}
