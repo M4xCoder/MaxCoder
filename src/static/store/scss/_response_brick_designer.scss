@@ -1,0 +1,23 @@
+@media screen and (max-width: 920px) {
+ 
+    .left__column{
+      width: 350px;
+    }
+  
+    .right__column{
+      width: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+   
+    .left__column{
+      width: auto;
+      padding: 5px;
+    }
+  
+    .right__column{
+      width: auto;
+      padding: 5px;
+    }
+  }

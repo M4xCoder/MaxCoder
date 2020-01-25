@@ -1,0 +1,84 @@
+.wrapper {
+  grid-template-areas: "nav nav nav" ". main ." "footer footer footer";
+}
+
+main {
+  margin: 0;
+  padding: 25px 0 25px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  color: #373737;
+  background-color: #fff;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+
+  h1{text-align: center;
+    color: red;
+  }
+}
+
+.left__column {
+  width: 400px;
+  min-width: 250px;
+
+  h3 {
+    vertical-align: inherit;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    vertical-align: inherit;
+    margin: 0;
+    margin-bottom: 1.8rem;
+  }
+
+}
+
+.right__column {
+  width: 400px;
+  min-width: 250px;
+
+  h3 {
+    vertical-align: inherit;
+    font-size: 1.2rem;
+  }
+
+}
+
+.button {
+  display: inline-block;
+  padding: 0 19px;
+  text-align: center;
+  height: 49px;
+  line-height: 49px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: #FFF;
+  background-color: #38beda;
+  border: 1px solid #38beda;
+  border-radius: 4px;
+  min-width: 165px;
+  vertical-align: inherit;
+
+  img {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: -4px;
+  }
+}
+
+
+@import "response_brick_designer";

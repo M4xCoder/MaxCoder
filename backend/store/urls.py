@@ -13,11 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
-from .views import store_page
+from django.urls import path, re_path
+from .views import store_page, brick_designer_page
+from django.conf import settings
 
 app_name = 'store'
 
 urlpatterns = [
     path('', store_page),
+    path('brick_designer', brick_designer_page)
 ]
+
+if settings.DEBUG:
+    from django.views.static import serve
+    urlpatterns += [
+        re_path(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    ]

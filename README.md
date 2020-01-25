@@ -14,7 +14,7 @@
 
 **Ссылки**:
 - [Сайт](https://maxcoder.ru)
-- [Доска в Trello](https://trello.com/)
+- [Доска в Trello](https://trello.com/b/SRSXMWTO/%D1%81%D0%B0%D0%B9%D1%82-maxcoder)
 - [Ошибки/Вопросы/Предложения](https://)
 
 
